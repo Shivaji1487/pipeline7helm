@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pipeline6-app
+  name: pipeline7-app
   namespace: abc-bank
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pipeline6-app
+      app: pipeline7-app
   template:
     metadata:
       labels:
-        app: pipeline6-app
+        app: pipeline7-app
     spec:
-
       initContainers:
       - name: copy-html
-        image: sshivaji555/pipeline6-app:latest
+        image: sshivaji555/pipeline7helm-app:latest
         imagePullPolicy: Always
         command:
           - sh
@@ -28,7 +27,7 @@ spec:
 
       containers:
       - name: nginx
-        image: sshivaji555/pipeline6-app:latest
+        image: sshivaji555/pipeline7helm-app:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 80
@@ -39,4 +38,4 @@ spec:
       volumes:
       - name: html-volume
         persistentVolumeClaim:
-          claimName: pipeline6-pvc
+          claimName: pipeline7-pvc

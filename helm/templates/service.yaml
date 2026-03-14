@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pipeline6-service
+  name: pipeline7helm-service
   namespace: abc-bank
 spec:
   type: ClusterIP
   selector:
-    app: pipeline6-app
+    app: pipeline7helm-app
   ports:
     - port: 80
       targetPort: 80

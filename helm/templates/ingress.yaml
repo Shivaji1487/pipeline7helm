@@ -1,37 +1,33 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pipeline6-ingress
+  name: pipeline7helm-ingress
   namespace: abc-bank
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: pipeline6.local
+  - host: pipeline7helm.local
     http:
       paths:
-
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: pipeline6-service
+            name: pipeline7helm-service
             port:
               number: 80
-
       - path: /login
         pathType: Prefix
         backend:
           service:
-            name: pipeline6-service
+            name: pipeline7helm-service
             port:
               number: 80
-
       - path: /signup
         pathType: Prefix
         backend:
           service:
-            name: pipeline6-service
+            name: pipeline7helm-service
             port:
               number: 80
-
