@@ -38,4 +38,4 @@ spec:
       volumes:
       - name: html-volume
         persistentVolumeClaim:
-          claimName: pipeline7-pvc
+          claimName: pipeline7helm-pvc
