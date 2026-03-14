@@ -6,7 +6,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: pipeline7helm-app
+    app: pipeline7-app
   ports:
     - port: 80
       targetPort: 80
