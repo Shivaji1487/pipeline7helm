@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pipeline7-app
-  namespace: abc-bank
+  namespace: bank-production
 spec:
   replicas: 1
   selector:
