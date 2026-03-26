@@ -9,7 +9,7 @@
     <packaging>war</packaging>
 
     <build>
-        <finalName>pipeline6</finalName>
+        <finalName>pipeline7</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
